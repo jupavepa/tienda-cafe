@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café La Vereda | Café de origen del Tolima</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO Y NAVEGACIÓN ===== -->
+  <header class="encabezado">
+    <a href="#inicio" class="logo">Café La Vereda</a>
+
+    <!-- Botón hamburguesa: solo visible en pantallas pequeñas -->
+    <button class="btn-menu" id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#carrito">Carrito (<span id="contador-carrito">0</span>)</a>
+      <a href="#contacto">Contacto</a>
+      <!-- Botón de modo claro / oscuro -->
+      <button class="btn-tema" id="btn-tema" aria-label="Cambiar a modo oscuro">Modo oscuro</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+      <h1>Café cultivado a 1.800 metros, tostado la semana que lo pides.</h1>
+      <p>Trabajamos con seis familias caficultoras del sur del Tolima. Elige tu café, agrégalo al carrito y nosotros nos encargamos del resto.</p>
+      <a href="#productos" class="btn-principal">Ver los cafés</a>
+    </section>
+
+    <!-- ===== PRODUCTOS ===== -->
+    <section class="productos" id="productos">
+      <h2>Nuestros cafés</h2>
+
+      <div class="grilla-productos">
+        <article class="producto">
+          <div class="producto-color" style="--tono: #6b3e26;"></div>
+          <h3>Origen Planadas</h3>
+          <p>Notas de panela y naranja. Tueste medio. 500 g.</p>
+          <p class="precio">$38.000</p>
+          <button class="btn-agregar" data-id="1" data-nombre="Origen Planadas 500 g" data-precio="38000">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <div class="producto-color" style="--tono: #3d2416;"></div>
+          <h3>Rioblanco Oscuro</h3>
+          <p>Cuerpo intenso, chocolate amargo. Tueste oscuro. 500 g.</p>
+          <p class="precio">$35.000</p>
+          <button class="btn-agregar" data-id="2" data-nombre="Rioblanco Oscuro 500 g" data-precio="35000">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <div class="producto-color" style="--tono: #a0522d;"></div>
+          <h3>Geisha Chaparral</h3>
+          <p>Floral, jazmín y durazno. Microlote. 250 g.</p>
+          <p class="precio">$62.000</p>
+          <button class="btn-agregar" data-id="3" data-nombre="Geisha Chaparral 250 g" data-precio="62000">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <div class="producto-color" style="--tono: #8b6f4e;"></div>
+          <h3>Molino manual</h3>
+          <p>Muelas cerámicas ajustables. Ideal para filtrado.</p>
+          <p class="precio">$95.000</p>
+          <button class="btn-agregar" data-id="4" data-nombre="Molino manual" data-precio="95000">Agregar al carrito</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CARRITO DE COMPRAS ===== -->
+    <section class="carrito" id="carrito">
+      <h2>Tu carrito</h2>
+
+      <!-- Mensaje que se muestra cuando el carrito está vacío -->
+      <p class="carrito-vacio" id="carrito-vacio">Tu carrito está vacío. Agrega un café desde la lista de productos.</p>
+
+      <!-- Contenedor donde JavaScript crea los ítems dinámicamente -->
+      <ul class="lista-carrito" id="lista-carrito"></ul>
+
+      <div class="carrito-pie">
+        <p class="total">Total: <strong id="total-carrito">$0</strong></p>
+        <button class="btn-vaciar" id="btn-vaciar">Vaciar carrito</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="pie" id="contacto">
+    <p>Café La Vereda, Ibagué (Tolima)</p>
+    <p>contacto@cafelavereda.co</p>
+  </footer>
+
+  <!-- Script vinculado antes del cierre de </body> -->
+  <script src="js/app.js"></script>
+</body>
+</html>
